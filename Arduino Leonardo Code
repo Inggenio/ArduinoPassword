@@ -1,0 +1,40 @@
+#include <Keyboard.h>
+
+int rxLed = 17;
+int button2 = 9;
+int password = 8;
+String pass = "*****";
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(rxLed, OUTPUT);
+  pinMode(password, INPUT_PULLUP);
+  Keyboard.begin();
+
+}
+
+
+void loop() {
+    
+  if(digitalRead(passwort) == 0){
+    Keyboard.print(pass);
+    delay(50);
+    Keyboard.write(176);
+    blinkBoton(5, 200);
+    delay(300);
+  }         
+}
+
+}
+void blinkBoton(int j,int ms){
+  for(int i = 0; i < j; i++){
+    blinkLed(ms);
+  }
+}
+void blinkLed(int tiempo){
+  digitalWrite(rxLed, HIGH);  
+  delay(tiempo);                
+  digitalWrite(rxLed, LOW);   
+  delay(tiempo);  
+}
+
